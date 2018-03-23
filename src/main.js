@@ -3,7 +3,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getData } from './doctor.js'
-//= `${body.data[i].practices[j].website}`;
+
 $(document).ready(function() {
   $('#input').submit(function(event) {
     event.preventDefault();
@@ -28,7 +28,7 @@ $(document).ready(function() {
           let practiceWebsite = body.data[i].practices[j].website;
 
           $('#doctor-data').append(
-            `<div class="well">${name}<br>
+            `<div id="practice">${name}<br>
             Practice: ${practiceName}<br>
             Accepting new patients? ${newPatients}<br>
             ${practiceStreet}<br>
