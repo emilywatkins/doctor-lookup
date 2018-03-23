@@ -51,6 +51,14 @@ Forest Grove, OR 97116
 
 * User can search by both name and issue to return more narrowed results.
 
+* If a search returns no results, a message is displayed to the user.
+  - Input: Bobby, Bugs
+  - Output: This search returned no results
+
+* If there is an API error, a message is displayed to the user.
+  - Status: anything other than 200
+  - Output: error
+
 
 ## Technologies Used
 
