@@ -14,7 +14,7 @@ $(document).ready(function() {
       for(var i = 0; i < body.data.length; i++) {
         $('#doctor-data').append(
           `<div class="doctors">
-          <b>Doctor Name: </b> ${body.data[i].profile.first_name} ${body.data[i].profile.middle_name} ${body.data[i].profile.last_name}, ${body.data[i].profile.title}
+          <b>Doctor Name: </b> ${body.data[i].profile.first_name} ${body.data[i].profile.last_name}, ${body.data[i].profile.title}
           <br>
           </div>`
         );
