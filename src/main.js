@@ -4,7 +4,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getData } from './doctor.js'
 
-
 $(document).ready(function() {
   $('#input').submit(function(event) {
     event.preventDefault();
@@ -12,7 +11,14 @@ $(document).ready(function() {
     promise.then(function(response) {
       let body = JSON.parse(response);
       console.log(body);
-      $('#doctor-data').text(`Response body: ${body.data[0].profile.bio}`);
+      for(var i = 0; i < body.data.length; i++) {
+        $('#doctor-data').append(
+          `<div class="doctors">
+          <b>Doctor Name: </b> ${body.data[i].profile.first_name} ${body.data[i].profile.middle_name} ${body.data[i].profile.last_name}, ${body.data[i].profile.title}
+          <br>
+          </div>`
+        );
+      }
     }, function(error) {
       $('#doctor-data').text('error');
     });
