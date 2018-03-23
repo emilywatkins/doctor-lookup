@@ -11,6 +11,9 @@ $(document).ready(function() {
     promise.then(function(response) {
       let body = JSON.parse(response);
       console.log(body);
+      if (body.data.length === 0) {
+        $('#doctor-data').append('This search returned no results');
+      }
       for(var i = 0; i < body.data.length; i++) {
         $('#doctor-data').append(
           `<div class="doctors">
