@@ -16,9 +16,12 @@ To install dependencies:
 
 `$ npm install`  
 
+To call API, visit https://developer.betterdoctor.com/ to get a free key. Navigate to src/doctor.js file and replace `${key}` with your API key in the url.
+
 To run program and open in browser:
 
-`$ npm run start`  
+`$ npm run start`
+
 
 
 ## Functionality
