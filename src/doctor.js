@@ -4,7 +4,7 @@ export function getData() {
 
   return new Promise(function(resolve, reject) {
     let request = new XMLHttpRequest();
-    let key = process.env.apiKey;
+    let key = process.env.exports.apiKey;
     let queryInput = $('#query').val();
     let query = queryInput.replace(/ /g,"%20");
     let nameInput = $('#name').val();
